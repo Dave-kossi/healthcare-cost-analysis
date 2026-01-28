@@ -1,111 +1,78 @@
-# 🚭 Impact du Tabagisme sur les Frais Médicaux – Analyse du Dataset *Insurance* (Kaggle)
+# 🏥 Insurance Risk Intelligence & Predictive Pricing
 
-## 📘 Contexte du projet
-Ce projet s’inscrit dans une démarche d’apprentissage et d’analyse prédictive appliquée aux **secteurs de la santé et de l’assurance**.  
-L’objectif est d’explorer le **dataset “insurance.csv”** disponible sur [Kaggle](https://www.kaggle.com/mirichoi0218/insurance), afin de **comprendre les facteurs influençant les frais médicaux** des assurés.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
-Cette étude est réalisée par **Kossi Noumagno**, *Data Analyst passionné par la data science, l’IA et les modèles prédictifs appliqués à la finance, l’assurance et l’e-commerce*.
+## 📌 Vision du Projet
+Ce projet dépasse l'analyse exploratoire classique pour proposer une **plateforme de décisionnelle (BI)** dédiée aux assureurs. En s'appuyant sur le dataset *Insurance* (Kaggle), l'application combine **Machine Learning prédictif** et **Scoring de risque actuariel** pour optimiser les politiques tarifaires.
 
----
-
-## 🎯 Objectifs du projet
-
-1. **Analyser les variables explicatives** (âge, sexe, IMC, nombre d’enfants, région, tabagisme, etc.) et leur influence sur les frais médicaux (`charges`).  
-2. **Visualiser les disparités majeures**, notamment entre fumeurs et non-fumeurs.  
-3. **Identifier les corrélations clés** et les relations non linéaires potentielles.  
-4. **Développer un modèle prédictif simple (régression linéaire)** pour estimer les frais médicaux.  
-5. **Préparer le terrain pour des modèles plus avancés** de Machine Learning (en cours de développement).  
+L'objectif est de transformer des données démographiques et comportementales en **recommandations de pricing stratégiques**.
 
 ---
 
-## 🧩 Structure du notebook
+## 🚀 Fonctionnalités du Dashboard Interactif
 
-| Section | Description |
-|----------|-------------|
-| **1. Importation des bibliothèques** | Chargement de pandas, numpy, matplotlib, seaborn, scikit-learn |
-| **2. Exploration des données (EDA)** | Inspection du dataset, valeurs manquantes, statistiques descriptives |
-| **3. Visualisation des relations** | Boxplots, heatmaps, distributions selon le tabagisme |
-| **4. Préparation des données** | Encodage des variables catégorielles, séparation features/target |
-| **5. Division du jeu de données** | Utilisation de `train_test_split(test_size=0.2, random_state=42)` |
-| **6. Modélisation (Régression Linéaire)** | Entraînement d’un modèle de base pour prédire `charges` |
-| **7. Évaluation du modèle** | Calcul du R², MAE et RMSE pour juger de la performance |
-| **8. Conclusion et perspectives** | Interprétation des résultats et ouverture vers des modèles plus puissants |
+L'application Streamlit est structurée en 4 piliers stratégiques :
+
+1.  **📊 Exploration Avancée (EDA)** : Visualisation dynamique de l'impact des facteurs de risque (Tabagisme, BMI, Âge) avec filtres régionaux.
+2.  **📈 Modèle Prédictif** : Moteur de régression linéaire estimant les frais médicaux en temps réel selon le profil utilisateur.
+3.  **🧠 Insights Automatisés** : Module de *Data Storytelling* générant des synthèses textuelles automatiques pour la direction.
+4.  **🎯 Scoring "Risk-Pulse"** : Algorithme propriétaire calculant un score de risque sur 10 et recommandant une action tarifaire (Tarif préférentiel vs Surprime).
 
 ---
 
-## 📊 Résultats principaux
+## 🧠 Méthodologie & Scoring
 
-### 🔹 Insight clé : le tabagisme
-L’analyse met en évidence un **écart considérable** entre les frais médicaux des fumeurs et des non-fumeurs :
+### 🧪 Algorithme de Risque (Propriétaire)
+Le système évalue chaque client sur une échelle de 0 à 10 en pondérant les facteurs critiques identifiés lors de l'analyse :
+* **Facteur Majeur** : Tabagisme (**+4 points**)
+* **Facteurs Morphologiques** : Obésité (BMI ≥ 30 : **+2 pts**)
+* **Facteurs Démographiques** : Âge (≥ 50 ans : **+2 pts**) et situation familiale.
 
-| Statut | Frais Médicaux Médians (€) | Observation |
-|---------|-----------------------------|--------------|
-| **Fumeurs** | 35 000 – 40 000 € | Charges nettement plus élevées |
-| **Non-fumeurs** | 8 000 – 10 000 € | Moins exposés au risque |
 
-Les fumeurs paient en moyenne **3 à 4 fois plus** que les non-fumeurs, confirmant le **rôle majeur du tabagisme** dans la prédiction des coûts de santé.
 
-### 🔹 Autres facteurs
-- **L’âge** et **le BMI (indice de masse corporelle)** augmentent aussi significativement les frais médicaux.  
-- Le **sexe** et la **région** ont un impact plus modéré.  
+### 📉 Résultats de la Modélisation
+L'analyse met en évidence une structure de coût non-linéaire :
+* **Médiane Fumeurs** : ~35 000 €
+* **Médiane Non-Fumeurs** : ~9 000 €
+👉 **Impact** : Le tabagisme multiplie les charges par **3.8x** en moyenne.
 
----
-
-## 🧠 Modèle prédictif
-
-Le modèle utilisé ici est une **régression linéaire simple**, visant à tester la relation entre les variables explicatives et la variable cible `charges`.
-
-### 🔧 En cours de développement :
-Une version améliorée du modèle intégrant :
-- la **régression multiple** (prise en compte simultanée de plusieurs variables),
-- des **modèles non linéaires** (Random Forest, XGBoost),
-- et un **système de prédiction personnalisé** (API/Gradio).
-
-Ces étapes visent à renforcer la **capacité prédictive** et la **généralisation** du modèle pour une application réelle dans les domaines de la santé et de l’assurance.
+| Métrique | Valeur |
+| :--- | :--- |
+| **Algorithme** | Régression Linéaire |
+| **Variable Cible** | Charges Médicales (€) |
+| **Validation** | Train/Test Split (80/20) |
 
 ---
 
-## 📈 Visualisation clé
+## 💰 Impact Métier : Optimisation Tarifaire
 
-![Impact du tabagisme sur les frais médicaux](image.png)
+L'outil traduit le score de risque en décisions de **Smart Pricing** :
 
-*(Visualisation réalisée avec Seaborn : boxplot des frais médicaux selon le statut de tabagisme)*
+| Catégorie | Score | Recommandation Stratégique |
+| :--- | :---: | :--- |
+| **🟢 FAIBLE** | 0 - 2 | **Tarif préférentiel** (-10% à -20%) |
+| **🟡 MOYEN** | 3 - 5 | **Tarif standard** |
+| **🟠 ÉLEVÉ** | 6 - 8 | **Surprime modérée** (+15% à +30%) |
+| **🔴 CRITIQUE** | 9 - 10 | **Surprime importante** (+35%+) & Suivi médical |
 
----
 
-## 🧩 Outils utilisés
-
-| Catégorie | Outils / Bibliothèques |
-|------------|------------------------|
-| Langage principal | Python |
-| Manipulation des données | Pandas, NumPy |
-| Visualisation | Matplotlib, Seaborn |
-| Modélisation | Scikit-learn |
-| Notebook d’analyse | Jupyter / Google Colab |
-| Source des données | Kaggle – *Insurance Dataset* |
 
 ---
 
-## 🧭 Conclusion
+## 🛠️ Stack Technique
 
-Cette étude démontre comment l’analyse exploratoire et la modélisation prédictive peuvent **révéler des insights concrets à fort impact métier**.  
-Le **tabagisme** ressort ici comme un **facteur de risque majeur** sur les frais médicaux, un résultat directement exploitable pour les **assureurs, actuaires et décideurs en santé publique**.
-
-Cette première étape ouvre la voie à une approche plus complète intégrant :
-- des modèles prédictifs robustes,
-- des tableaux de bord interactifs,
-- et une narration visuelle claire (**data storytelling**) pour la prise de décision.
+* **Langage** : Python 3.x
+* **Interface** : Streamlit (Web App interactive)
+* **Analyse de données** : Pandas, NumPy
+* **Visualisation** : Seaborn, Matplotlib, Plotly (interactivité avancée)
+* **Machine Learning** : Scikit-learn (Régression Linéaire)
 
 ---
 
-## ✍️ Auteur
+## 📁 Installation et Usage
 
-**Kossi Noumagno**  
-🎓 *Data Analyst & Junior Data Scientist*  
-💡 Passionné par la science des données, la modélisation prédictive, et l’application de l’IA dans la finance, l’assurance et le e-commerce.  
-🔗 [LinkedIn](https://www.linkedin.com/in/kossi-noumagno) | [Kaggle](https://www.kaggle.com/) | [GitHub](https://github.com/)
-
----
-
-## 🏷️ Mots-clés
-`Data Science` • `Machine Learning` • `Predictive Modeling` • `Regression` • `Insurance Dataset` • `Data Visualization` • `Healthcare Analytics`
+1. **Cloner le répertoire** :
+   ```bash
+   git clone [https://github.com/votre-username/insurance-risk-intelligence.git](https://github.com/votre-username/insurance-risk-intelligence.git)
