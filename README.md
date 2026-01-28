@@ -83,8 +83,13 @@ Vous pouvez tester la plateforme de deux manières :
 Accédez instantanément à l'interface interactive ici :  
 👉 **[Insurance Risk App - Live Demo](https://predictive-analysis-g7zjxrbuf79tfb3aolobma.streamlit.app/)**
 
-### 💻 Installation Locale
-Si vous souhaitez exécuter le projet sur votre machine :
-1. **Cloner le répertoire** :
-   ```bash
-   git clone [https://github.com/Dave-kossi/insurance-risk-intelligence.git](https://github.com/votre-username/insurance-risk-intelligence.git)
+## 💻 Installation Locale
+```bash
+# 1. Cloner le projet
+git clone [https://github.com/Dave-kossi/healthcare-cost-analysis.git](https://github.com/Dave-kossi/healthcare-cost-analysis.git)
+
+# 2. Installer les dépendances
+pip install -r requirements.txt
+
+# 3. Lancer l'application
+streamlit run app.py
