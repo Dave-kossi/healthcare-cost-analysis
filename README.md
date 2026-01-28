@@ -1,9 +1,8 @@
 # 🏥 Insurance Risk Intelligence & Predictive Pricing
 
-** Démo Live : [Accéder à l'application sur Streamlit Cloud](https://predictive-analysis-g7zjxrbuf79tfb3aolobma.streamlit.app/)**
+![Accéder à l'application sur Streamlit Cloud](https://predictive-analysis-g7zjxrbuf79tfb3aolobma.streamlit.app/)
 
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
