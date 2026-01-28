@@ -1,17 +1,22 @@
 # 🏥 Insurance Risk Intelligence & Predictive Pricing
 
+** Démo Live : [Accéder à l'application sur Streamlit Cloud](https://predictive-analysis-g7zjxrbuf79tfb3aolobma.streamlit.app/)**
+
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
-## 📌 Vision du Projet
+## Vision du Projet
 Ce projet dépasse l'analyse exploratoire classique pour proposer une **plateforme de décisionnelle (BI)** dédiée aux assureurs. En s'appuyant sur le dataset *Insurance* (Kaggle), l'application combine **Machine Learning prédictif** et **Scoring de risque actuariel** pour optimiser les politiques tarifaires.
 
 L'objectif est de transformer des données démographiques et comportementales en **recommandations de pricing stratégiques**.
 
 ---
 
-## 🚀 Fonctionnalités du Dashboard Interactif
+##  Fonctionnalités du Dashboard Interactif
 
 L'application Streamlit est structurée en 4 piliers stratégiques :
 
@@ -71,8 +76,16 @@ L'outil traduit le score de risque en décisions de **Smart Pricing** :
 
 ---
 
-## 📁 Installation et Usage
+## 🎮 Démonstration et Utilisation
 
+Vous pouvez tester la plateforme de deux manières :
+
+### 🌐 Version Cloud (Recommandé)
+Accédez instantanément à l'interface interactive ici :  
+👉 **[Insurance Risk App - Live Demo](https://predictive-analysis-g7zjxrbuf79tfb3aolobma.streamlit.app/)**
+
+### 💻 Installation Locale
+Si vous souhaitez exécuter le projet sur votre machine :
 1. **Cloner le répertoire** :
    ```bash
-   git clone [https://github.com/votre-username/insurance-risk-intelligence.git](https://github.com/votre-username/insurance-risk-intelligence.git)
+   git clone [https://github.com/Dave-kossi/insurance-risk-intelligence.git](https://github.com/votre-username/insurance-risk-intelligence.git)
